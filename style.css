@@ -1,0 +1,204 @@
+:root {
+  --bg: #f1f4f7;       /* latar halaman */
+  --card: #ffffff;     /* latar kartu */
+  --ink: #14212b;      /* warna teks utama */
+  --mute: #5d6b77;     /* warna teks pendukung */
+  --line: #dbe2e8;     /* warna garis tepi */
+  --acc: #2a55d9;      /* warna aksen (tombol, menu aktif) */
+  --ok: #0f7a55;       /* teks status Kosong */
+  --okbg: #dcf3ea;     /* latar status Kosong */
+  --no: #b3261e;       /* teks status Dipakai */
+  --nobg: #fbe2e0;     /* latar status Dipakai */
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.45 system-ui, "Segoe UI", Roboto, sans-serif;
+}
+
+#app {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 16px 16px 90px;   /* bawah 90px agar tidak tertutup menu */
+}
+
+h1 {
+  font-size: 26px;
+  margin: 8px 0 4px;
+}
+
+.sub,
+.meta {
+  color: var(--mute);
+  font-size: 14px;
+}
+
+.sub {
+  margin: 0 0 16px;
+}
+
+.name {
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.empty {
+  color: var(--mute);
+  text-align: center;
+  padding: 32px 0;
+}
+
+
+.chips {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.chip {
+  border: 1px solid var(--line);
+  background: var(--card);
+  border-radius: 20px;
+  padding: 8px 14px;
+  font: inherit;
+  font-size: 14px;
+}
+
+.chip[aria-pressed="true"] {
+  background: var(--acc);
+  color: #ffffff;
+  border-color: var(--acc);
+}
+
+.room {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.room > button {
+  all: unset;
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px;
+  gap: 12px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.grow {
+  flex: 1;
+}
+
+.badge {
+  font-size: 13px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.ok {
+  background: var(--okbg);
+  color: var(--ok);
+}
+
+.no {
+  background: var(--nobg);
+  color: var(--no);
+}
+
+.det {
+  border-top: 1px solid var(--line);
+  padding: 12px 14px;
+  font-size: 14px;
+}
+
+.det div {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+  gap: 8px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  margin: 14px 0 6px;
+}
+
+input,
+select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--card);
+  color: var(--ink);
+  font: inherit;
+}
+
+.row2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.btn {
+  width: 100%;
+  margin-top: 14px;
+  padding: 13px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--acc);
+  color: #ffffff;
+  font: inherit;
+  font-weight: 700;
+}
+
+.btn.sec {
+  background: none;
+  color: var(--acc);
+  border: 1px solid var(--acc);
+}
+
+.msg {
+  margin-top: 14px;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+
+
+.nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  background: var(--card);
+  border-top: 1px solid var(--line);
+  padding: 6px;
+}
+
+.nav button {
+  flex: 1;
+  background: none;
+  border: 0;
+  color: var(--mute);
+  font: inherit;
+  font-size: 13px;
+  padding: 10px;
+}
+
+.nav button[aria-current="true"] {
+  color: var(--acc);
+  font-weight: 700;
+}
